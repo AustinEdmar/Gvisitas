@@ -25,18 +25,18 @@ class AuthRegisterRequest extends FormRequest
             'first_name' => 'required|string',
             'last_name' => 'required|string',
             'birthday' => 'string|nullable',
+            'email' => 'required|email',
+            
             'image' => 'string|nullable',
             'phone_number' => 'string|nullable',
             'police_rank_id' => 'string|nullable',
-            'level_id' => 'string|nullable',
+           // 'level_id' => 'string|nullable',
             'direction_id' => 'string|nullable',
             'department_id' => 'string|nullable',
             'section_id' => 'string|nullable',
             'gender_id' => 'string|nullable',
-            'status_id' => 'string|nullable',
-            'floor_id' => 'string|nullable',
-            'email' => 'required|email',
-            'password' => 'required|string|min:8|max:30|regex:/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).+$/', // uma letra pelo menos mauiscula
+           // 'status_id' => 'string|nullable',
+            'password' => 'required|string|confirmed|min:8|max:30|regex:/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).+$/', // uma letra pelo menos mauiscula
         ];
       
     }

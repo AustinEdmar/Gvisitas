@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use App\Models\{Level, Gender, Visitor, Nacionality, Pvc, Progress, Police_rank, Status, Document, Direction, Floor, Department, Group, Section, User, Thing};
 
 
@@ -586,9 +587,9 @@ class DatabaseSeeder extends Seeder
             'direction_id' => '1',
             'gender_id' => '1',
             'status_id' => '1',
-            'confirmation_token' =>'3444456667',
-            'email' => 'domingosmussumar@gmail.com',
-            'password' => Hash::make('923.eddy')
+            'confirmation_token' => Str::random(60), 
+            'email' => 'austin@gmail.com',
+            'password' => Hash::make('Password1')
 
         ]);
 
@@ -604,9 +605,9 @@ class DatabaseSeeder extends Seeder
             'direction_id' => '1',
             'gender_id' => '1',
             'status_id' => '1',
-            'confirmation_token' =>'3444456667',
+            'confirmation_token' => Str::random(60), 
             'email' => 'azevedo@gmail.com',
-            'password' => Hash::make('923.eddy')
+            'password' => Hash::make('Password1')
 
         ]);
 
@@ -622,9 +623,9 @@ class DatabaseSeeder extends Seeder
             'direction_id' => '1',
             'gender_id' => '1',
             'status_id' => '1',
-            'confirmation_token' =>'3444456667',
+            'confirmation_token' => Str::random(60), 
             'email' => 'felgueiras@gmail.com',
-            'password' => Hash::make('923.eddy')
+            'password' => Hash::make('Password1')
 
         ]);
 
@@ -639,9 +640,9 @@ class DatabaseSeeder extends Seeder
             'direction_id' => '1',
             'gender_id' => '1',
             'status_id' => '1',
-            'confirmation_token' =>'3444456667',
+            'confirmation_token' => Str::random(60), 
             'email' => 'dombaxi@gmail.com ',
-            'password' => Hash::make('923.eddy')
+            'password' => Hash::make('Password1')
 
         ]);
 
@@ -659,9 +660,9 @@ class DatabaseSeeder extends Seeder
             'department_id' => '1',
             'gender_id' => '2',
             'status_id' => '1',
-            'confirmation_token' =>'3444456667',
+            'confirmation_token' => Str::random(60), 
             'email' => 'esmeralda@gmail.com',
-            'password' => Hash::make('923.eddy')
+            'password' => Hash::make('Password1')
 
         ]);
 
@@ -673,14 +674,14 @@ class DatabaseSeeder extends Seeder
             'phone_number' => '9238512597',
             'police_rank_id' => '3',
             'level_id' => '1',
-
+            'confirmation_token' => Str::random(60), 
             'department_id' => '1',
             'gender_id' => '1',
             'status_id' => '1',
            
-            'confirmation_token' =>'3444456667',
+            
             'email' => 'paulo@gmail.com',
-            'password' => Hash::make('923.eddy')
+            'password' => Hash::make('Password1')
 
         ]);
 

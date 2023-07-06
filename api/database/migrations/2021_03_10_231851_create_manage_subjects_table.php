@@ -20,7 +20,7 @@ class CreateManageSubjectsTable extends Migration
             /* $table->string('exit_time'); */
               
             $table->longText('motive');
-            $table->string('by');
+            $table->integer('by');
              
             $table->unsignedBigInteger('pvc_id');
             $table->foreign('pvc_id')->references('id')->on('pvcs')->onDelete('cascade');

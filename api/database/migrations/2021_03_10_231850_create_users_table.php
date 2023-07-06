@@ -17,9 +17,10 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();//add
+            $table->string('email')->unique();
             $table->string('birthday')->nullable(); //add
             $table->string('image')->nullable();
-            $table->string('confirmation_token');
+            $table->string('confirmation_token')->nullable();
             
             /* $table->boolean('status')->default(1); */
         
@@ -28,7 +29,7 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('police_rank_id');
             $table->foreign('police_rank_id')->references('id')->on('police_ranks')->onDelete('cascade');
             
-            $table->unsignedBigInteger('level_id');
+            $table->unsignedBigInteger('level_id')->nullable();
             $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
 
             $table->unsignedBigInteger('direction_id')->nullable();
@@ -43,11 +44,11 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('gender_id');
             $table->foreign('gender_id')->references('id')->on('genders')->onDelete('cascade');
 
-            $table->unsignedBigInteger('status_id');
+            $table->unsignedBigInteger('status_id')->nullable();
             $table->foreign('status_id')->references('id')->on('statuses')->onDelete('cascade');
 
            
-            $table->string('email')->unique();
+            
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
            /*  $table->rememberToken();  removi*/
